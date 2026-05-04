@@ -1,0 +1,73 @@
+/* --- ESTILOS PARA EL HEADER (HERO) CON TU IMAGEN --- */
+
+.hero {
+    /* 1. La imagen de fondo: primero una capa oscura, luego tu imagen */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('IMG_7254.jpg');
+    
+    /* 2. Ajustes clave para que la imagen se vea perfecta */
+    background-size: cover;       /* Cubre todo el área sin estirarse */
+    background-position: center;  /* Centra la foto, perfecto para tu toma */
+    background-repeat: no-repeat; /* No repite la imagen */
+    background-attachment: fixed; /* Opcional: efecto 'parallax' al hacer scroll */
+
+    /* 3. Dimensiones y centrado del contenido */
+    height: 100vh;                /* Altura de pantalla completa para impacto total */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(170, 170, 170);                 /* Texto blanco para contraste */
+    padding: 0 20px;              /* Espacio en móviles */
+}
+
+/* --- ESTILOS PARA EL TEXTO SOBRE LA IMAGEN --- */
+
+.hero-content h2 {
+    font-size: 3rem;              /* Tamaño grande y potente */
+    margin-bottom: 20px;
+    font-weight: 800;
+    text-transform: uppercase;    /* Mayúsculas para impacto */
+    letter-spacing: 2px;
+    /* Sombra de texto para una legibilidad perfecta */
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    max-width: 800px;             /* Limita el ancho del texto */
+    margin: 0 auto 30px;
+    line-height: 1.8;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+}
+
+/* --- BOTÓN OPCIONAL --- */
+.btn-hero {
+    background-color: #fbc02d;    /* Amarillo Agropower */
+    color: #000;
+    padding: 15px 35px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s, transform 0.2s;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.btn-hero:hover {
+    background-color: #f9a825;
+    transform: translateY(-3px);  /* Pequeño efecto de elevación */
+}
+
+/* --- RESPONSIVE PARA MÓVILES --- */
+@media (max-width: 768px) {
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    .hero-content p {
+        font-size: 1rem;
+    }
+    .hero {
+        background-attachment: scroll; /* Desactiva el fixed en móviles */
+    }
+}
